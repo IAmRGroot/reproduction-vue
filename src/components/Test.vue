@@ -1,17 +1,20 @@
 <template>
     <div>
-        {{ label }}
-        {{ value }}
+        {{ ip }}
+        <div>
+            {{value}}
+        </div>
     </div>
 </template>
 
 <script lang="ts" setup>
+import { useIp } from '@/compositions/ip';
+
 interface Props {
     value: number|string,
-    label: string|null|undefined,
 }
 
-withDefaults(defineProps<Props>(), {
-    label: null,
-});
+defineProps<Props>();
+
+const { ip } = useIp();
 </script>

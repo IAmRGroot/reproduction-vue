@@ -1,9 +1,12 @@
 <template>
-    <Test 
-        value="hi"
-    />
+    <Wrapper />
 </template>
 
 <script lang="ts" setup>
-import Test from './components/Test.vue';
+import { useIp } from '@/compositions/ip';
+import Wrapper from './components/Wrapper.vue';
+
+const { fetchIp } = useIp();
+
+void fetchIp();
 </script>
