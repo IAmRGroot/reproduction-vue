@@ -4,7 +4,7 @@
             :value="ip"
         />
 
-        {{ ip + 'fdsaasdf' }}
+        {{ ip }} {{ edit_me }}
     </div>
 </template>
 
@@ -15,6 +15,7 @@ import { watch } from '@vue/composition-api';
 import Test from './Test.vue';
 
 const { ip } = useIp();
+const edit_me = 'edit_me';
 
 watch(() => ip.value, () => {
     console.log(ip.value)
