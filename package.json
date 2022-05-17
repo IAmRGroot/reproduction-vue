@@ -3,18 +3,22 @@
     "version": "1.0.0",
     "scripts": {
         "vite": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "lint": "eslint src ./*.ts --fix --ext .ts,.vue"
     },
     "dependencies": {
         "vue": "^2.6.14"
     },
     "devDependencies": {
+        "@typescript-eslint/parser": "^5.24.0",
         "@vue/compiler-sfc": "^3.2.33",
         "@vue/composition-api": "^1.6.0",
         "@vue/runtime-dom": "^3.2.33",
+        "eslint": "^8.15.0",
         "typescript": "^4.6.4",
         "unplugin-vue2-script-setup": "^0.10.2",
         "vite": "^2.9.8",
-        "vite-plugin-vue2": "^2.0.0"
+        "vite-plugin-vue2": "^2.0.0",
+        "vue-eslint-parser": "^9.0.1"
     }
 }
